@@ -1,6 +1,6 @@
 <template>
   <el-scrollbar wrap-class="scrollbar-wrapper">
-    <logo :collapse="isCollapse" title="Vue Element Admin" logo="https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png" />
+    <logo :collapse="isCollapse" />
     <el-menu
       :default-active="$route.path"
       :collapse="isCollapse"
@@ -10,7 +10,7 @@
       :collapse-transition="false"
       mode="vertical"
     >
-      <sidebar-item v-for="route in permission_routers" :key="route.path" :item="route" :base-path="route.path"/>
+      <sidebar-item v-for="route in permission_routers" :key="route.path" :item="route" :base-path="route.path" />
     </el-menu>
   </el-scrollbar>
 </template>
