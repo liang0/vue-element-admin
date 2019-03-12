@@ -1,5 +1,6 @@
 <template>
   <el-scrollbar wrap-class="scrollbar-wrapper">
+    <logo :collapse="isCollapse" title="Vue Element Admin" logo="https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png" />
     <el-menu
       :default-active="$route.path"
       :collapse="isCollapse"
@@ -16,11 +17,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Logo from './Logo'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 
 export default {
-  components: { SidebarItem },
+  components: { SidebarItem, Logo },
   computed: {
     ...mapGetters([
       'permission_routers',
